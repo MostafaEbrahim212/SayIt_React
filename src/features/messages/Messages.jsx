@@ -235,7 +235,7 @@ const Messages = () => {
         </aside>
 
         {/* ================= CHAT ================= */}
-        <main className="lg:col-span-2 flex flex-col bg-slate-900 overflow-hidden">
+        <main className="lg:col-span-2 flex flex-col bg-slate-900 overflow-hidden " style={{maxHeight: "calc(100vh - 70px)"}}>
           {/* HEADER */}
           <div className="p-3 md:p-4 border-b border-slate-800 flex-shrink-0">
             <div className="flex items-center gap-2 md:gap-3 flex-wrap">
@@ -279,7 +279,7 @@ const Messages = () => {
           </div>
 
           {/* MESSAGES */}
-          <div className="flex-1 overflow-y-auto px-3 md:px-4 py-4 md:py-6 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-900">
+          <div className="flex-1 overflow-y-auto px-3 md:px-4 py-4 md:py-6 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-slate-900" style={{minHeight:"calc(100vh - 200px)"}}>
             <div className="flex flex-col gap-2 md:gap-3">
               {loadingThread ? (
                 <div className="text-xs md:text-sm text-slate-400">
