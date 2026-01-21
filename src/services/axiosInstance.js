@@ -6,6 +6,7 @@ const API = axios.create({
   headers: {
     "Content-Type": "application/json",
   },
+  withCredentials: true, // لو بتستخدم الكوكيز
 });
 
 export default API;
