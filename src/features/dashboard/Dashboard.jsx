@@ -3,7 +3,6 @@ import { logout } from "../../services/authService";
 import Header from "../../components/Header";
 import { useAuth } from "../../hooks/useAuth";
 import Footer from "../../components/Footer";
-import SocketDebug from "../../components/SocketDebug";
 import { useEffect, useState } from "react";
 import API from "../../services/axiosInstance";
 import { useTranslation } from "react-i18next";

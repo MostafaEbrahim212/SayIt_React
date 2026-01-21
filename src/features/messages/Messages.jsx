@@ -174,7 +174,7 @@ const Messages = () => {
 
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-3 overflow-hidden">
         {/* ================= SIDEBAR ================= */}
-        <aside className="hidden lg:block border-r border-slate-800 bg-slate-900 overflow-hidden flex flex-col">
+        <aside className=" lg:block border-r border-slate-800 bg-slate-900 overflow-hidden flex flex-col">
           <div className="p-3 md:p-4 font-bold text-base md:text-lg border-b border-slate-800">{t('messages.conversations')}</div>
 
           <div className="overflow-y-auto divide-y divide-slate-800 flex-1">

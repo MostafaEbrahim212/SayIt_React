@@ -76,4 +76,5 @@ class HttpClient {
   }
 }
 
-export default new HttpClient();
+const httpClient = new HttpClient();
+export default httpClient;

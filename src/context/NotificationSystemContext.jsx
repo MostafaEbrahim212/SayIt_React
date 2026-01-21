@@ -1,9 +1,16 @@
-import { createContext, useState, useCallback } from "react";
+import { createContext, useState, useCallback, useRef } from "react";
 
 export const NotificationContext = createContext();
 
 export const NotificationProvider = ({ children }) => {
   const [notifications, setNotifications] = useState([]);
+  const removeNotificationRef = useRef(null);
+
+  const removeNotification = useCallback((id) => {
+    setNotifications((prev) => prev.filter((n) => n.id !== id));
+  }, []);
+
+  removeNotificationRef.current = removeNotification;
 
   const addNotification = useCallback(
     ({
@@ -37,7 +44,7 @@ export const NotificationProvider = ({ children }) => {
       // Auto-remove after duration
       if (duration > 0) {
         setTimeout(() => {
-          removeNotification(id);
+          removeNotificationRef.current(id);
         }, duration);
       }
 
@@ -45,10 +52,6 @@ export const NotificationProvider = ({ children }) => {
     },
     []
   );
-
-  const removeNotification = useCallback((id) => {
-    setNotifications((prev) => prev.filter((n) => n.id !== id));
-  }, []);
 
   const clearAll = useCallback(() => {
     setNotifications([]);

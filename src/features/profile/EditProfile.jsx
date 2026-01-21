@@ -11,7 +11,7 @@ export default function EditProfile() {
   const { logout, user, setUser } = useAuth();
   const { setToast } = useToast();
   const { t } = useTranslation();
-  const [loading, setLoading] = useState(true);
+  const [, setLoading] = useState(true);
   const [savingAccount, setSavingAccount] = useState(false);
   const [savingProfile, setSavingProfile] = useState(false);
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
@@ -66,7 +66,7 @@ export default function EditProfile() {
     };
 
     fetchProfile();
-  }, [t]);
+  }, [t, setLoading]);
 
   const handleSocialChange = (field, value) => {
     setSocialLinks((prev) => ({ ...prev, [field]: value }));

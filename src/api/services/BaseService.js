@@ -1,5 +1,4 @@
 import HttpClient from './HttpClient';
-import { AUTH_CONFIG } from '../config';
 
 /**
  * Base Service Class
