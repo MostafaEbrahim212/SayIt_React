@@ -35,7 +35,21 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "rules": {
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ],
+      "react-hooks/exhaustive-deps": [
+        "warn"
+      ],
+      "import/no-anonymous-default-export": [
+        "warn"
+      ]
+    }
   },
   "browserslist": {
     "production": [
